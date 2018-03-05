@@ -13,6 +13,7 @@ class AlarmsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_alarm_url
     assert_response :success
+    assert_select "upvotes", 0
   end
 
   test "should create alarm" do
@@ -45,4 +46,12 @@ class AlarmsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to alarms_url
   end
+
+  # test "should increate vote count by 1" do
+  #   assert_difference('Alarm.last.upvotes', 1) do
+  #     @alarm.update_attribute('upvotes', @alarm.upvotes+1)
+  #   end
+
+  #   assert_response :success
+  # end
 end

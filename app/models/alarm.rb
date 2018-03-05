@@ -7,6 +7,7 @@ class Alarm < ApplicationRecord
 	before_validation :upcase_description
 	
 	def upcase_description
+		return if description.nil?
 		description.upcase!
 	end
 end

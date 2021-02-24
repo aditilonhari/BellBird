@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'newrelic_rpm'
 
+gem 'newrelic_rpm'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
